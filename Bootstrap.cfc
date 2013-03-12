@@ -116,6 +116,29 @@
 		<cfreturn loc.field>
 	</cffunction>
 
+	<cffunction name="bRadio" returntype="string" hint="Bootstrap markup version of the Wheels `radio` form helper.">
+		<cfscript>
+			var loc = {};
+
+			loc.field = radio(
+				argumentCollection=arguments,
+				labelPlacement="around",
+				labelClass="radio"
+			);
+
+			loc.hasErrors = Evaluate($objectName(argumentCollection=arguments)).hasErrors(arguments.property);
+
+			loc.field =
+				'<div class="control-group #loc.hasErrors ? 'error': ''#">
+					<label class="control-label"></label>
+					<div class="controls">
+						#loc.field#
+					</div>
+				</div>';
+		</cfscript>
+		<cfreturn loc.field>
+	</cffunction>
+
 	<cffunction name="bFileField" returntype="string" hint="Bootstrap markup version of the Wheels `fileField` form helper.">
 		<cfscript>
 			var loc = {
