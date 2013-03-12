@@ -17,6 +17,7 @@ method names.
   * `bPasswordField([ string helpBlock, string prependedText, string appendedText ])`
   * `bUneditableTextField(string label, string value [, string class ])`
   * `bCheckBox()`
+  * `bRadio()`
 
 These form helpers also place error messages in-line using `errorMessageOn` and Bootstrap.
 
@@ -41,8 +42,10 @@ You must install the [Nested errorMessageOn][2] plugin for this plugin to work.
 ## Contributors
 
 Created by [Chris Peters][3] with support from [Liquifusion Studios][4].
+Modified by [Brian Lang][5]
 
 [1]: http://twitter.github.com/bootstrap/
 [2]: http://cfwheels.org/plugins/listing/78
 [3]: http://cfwheels.org/user/profile/1
 [4]: http://liquifusion.com/
+[5]: https://github.com/brilang
